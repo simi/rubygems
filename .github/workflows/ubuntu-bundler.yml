@@ -37,6 +37,7 @@ jobs:
           bundler: none
       - name: Prepare dependencies
         run: |
+          git submodule update -i
           sudo apt-get install graphviz -y
           bin/rake spec:parallel_deps
         working-directory: ./bundler

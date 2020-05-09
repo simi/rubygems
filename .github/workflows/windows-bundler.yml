@@ -24,6 +24,7 @@ jobs:
           bundler: none
       - name: Install dependencies
         run: |
+          git submodule update -i
           bin/rake spec:parallel_deps
         working-directory: ./bundler
         shell: bash

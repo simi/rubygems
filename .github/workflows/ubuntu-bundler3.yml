@@ -25,6 +25,7 @@ jobs:
           bundler: none
       - name: Prepare dependencies
         run: |
+          git submodule update -i
           BUNDLER_SPEC_SUB_VERSION=3.0.0 bin/rake override_version
           bin/rake spec:parallel_deps
         working-directory: ./bundler
