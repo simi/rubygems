@@ -23,7 +23,7 @@ jobs:
         run: |
           git submodule update -i
           sudo apt-get install graphviz -y
-          bin/rake spec:parallel_deps
+          bin/rake spec:deps
         working-directory: ./bundler
       - name: Run Test
         run: |

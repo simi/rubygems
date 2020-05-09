@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           git submodule update -i
-          bin/rake spec:parallel_deps
+          bin/rake spec:deps
         working-directory: ./bundler
         shell: bash
       - name: Run specs
